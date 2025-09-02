@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age calculator</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Age calculator</h1>
+    <div style="background-color:rgb(111, 222, 118);width:600px;height:500px;position:absolute;margin-left: 30%;">
+    <p id="Age">Age Result=</p>
+     <p id="MonthResult">month Result=</p>
+      <p id="YearResult">year Result=</p>
+    <p>11</p> 
+    <p>7</p>
+    <p>2025</p>
+     <input type="no" id="my0input" placeholder="enter day">
+     <input type="no" id="my1input" placeholder="enter currentday">
+    <input type="no" id="my2input" placeholder="enter currentmonth">
+    <input type="no" id="my3input" placeholder="enter month">
+   <input type="no" id="my4input" placeholder="enter  year">
+    <input type="no" id="my5input" placeholder="enter  currentyear">
+  <button id="age">age res</button>
+  <button id="Month">month res</button>
+   <button id="Year">year</button>
+  
+<script>
+document.getElementById("age").onclick=()=>{
+let day=document.getElementById("my0input").value;
+let currentday=document.getElementById("my1input").value;
+let Age= parseInt(day) - parseInt(currentday);
+
+document.getElementById("Age").innerHTML=" this is my result of " +day + " - "+ currentday + " = "+ Age;
+ }
+
+
+document.getElementById("Month").onclick=()=>{
+
+let currentmonth=document.getElementById("my2input").value;
+let month=document.getElementById("my3input").value;
+let Month= parseInt(currentmonth) - parseInt(month);
+document.getElementById("MonthResult").innerHTML=" this is my result of " +currentmonth + " - "+ month+ " = "+ Month;
+console.log("month"),Month;
+}
+
+
+document.getElementById("Year").onclick=()=>{
+
+let year=document.getElementById("my4input").value;
+let currentyear=document.getElementById("my5input").value;
+let Year= parseInt(year) - parseInt(currentyear);
+document.getElementById("YearResult").innerHTML=" this is my result of " +year + " - "+ currentyear+ " = "+ Year;
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+    </div>
+    
+</body>
+</html>
