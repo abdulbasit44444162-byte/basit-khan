@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arithematic,conditions</title>
+    <header><h1 style="background-color: aqua;margin-left: 28%;width:310px;">arithematic,conditions</h1></header>
+    <style>
+        .container{   width: 500px;
+            height:400px;
+            background-color: darkred;
+           margin-left: 20%;
+           padding-left: 50px;
+           }
+       button{ width: 80px;
+               height: 20px;
+
+              }
+              body{ background-color: rgb(221, 243, 134);}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+    <p id="Age">Age of person is </p>
+    <input type="no"   id="my1input"  placeholder="enter day"><br><br>
+     <input type="no"   id="my2input"  placeholder="enter month"><br><br>
+    <input type="no"   id="my3input"  placeholder="enter year"><br><br>
+    <button id="age">Age</button>
+    <br><br><br><h1 style="background-color: aqua;margin-left: 12%;width:200px;margin-top: 100px;">Conditions</h1>
+    <div class="container">
+        
+    <p id="Result">Result=</p>
+ <input type="number" id="result5" placeholder="enter a">
+     <br><br>
+    <input type="number" id="result6" placeholder="enter b">
+    <br><br>
+   <input type="number" id="result7" placeholder="enter c">
+
+   <br><br>
+    <button id="conditions">conditions</button>
+
+
+
+</div>
+    <script>
+          document.getElementById("age").onclick=()=>{
+
+        let day=document.getElementById("my1input").value;
+         let month=document.getElementById("my2input").value;
+         let year=document.getElementById("my3input").value;      
+
+         let currentday=14;
+         let mydays=parseInt(day) -  parseInt(currentday);
+         let currentmonth=7;
+         let mymonths=parseInt(month) - parseInt(currentmonth);
+          let currentyear=2025;
+          let myyear=parseInt(year) - parseInt(currentyear);
+          document.getElementById("Age").innerText=  "find my result"+"mydays"+mydays+"mymonths"+mymonths+"myyear"+myyear;
+           }
+           
+       document.getElementById("conditions").onclick=()=>{
+           let a=document.getElementById("result5").value;
+         let b=document.getElementById("result6").value;
+         let c=document.getElementById("result7").value; 
+         //let d=document.getElementById("result8").value; 
+
+          if(a>b && a>c){ 
+            document.getElementById("Result").innerText= "a is grater"+a;
+
+
+          }
+                  
+ else if(a<b && b>c){
+     document.getElementById("Result").innerText= " b is grater"+b;
+
+
+          }
+
+else if(a<c && b<c){
+     document.getElementById("Result").innerText= " c is grater"+c;
+
+
+          }
+else{
+
+  document.getElementById("Result").innerText= " All are same";
+
+//document.getElementById("result8").innerText="no egual"+d;
+
+}
+
+
+
+       }
+
+
+
+    </script>
+</body>
+</html>
